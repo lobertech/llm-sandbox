@@ -78,6 +78,7 @@ class SupportedLanguage(StrEnum):
     GO = "go"
     RUBY = "ruby"
     R = "r"
+    BASH = "bash"
 
 
 @dataclass
@@ -95,6 +96,7 @@ class DefaultImage:
     GO = "ghcr.io/vndee/sandbox-go-123-bullseye"
     RUBY = "ghcr.io/vndee/sandbox-ruby-302-bullseye"
     R = "ghcr.io/vndee/sandbox-r-451-bullseye"
+    BASH = "debian:bullseye-slim"
 
 
 # Type alias for encoding error handling modes (matches Python's bytes.decode errors parameter)

@@ -5,6 +5,7 @@ from llm_sandbox.const import SupportedLanguage
 from llm_sandbox.exceptions import LanguageNotSupportedError
 
 from .base import AbstractLanguageHandler
+from .bash_handler import BashHandler
 from .cpp_handler import CppHandler
 from .go_handler import GoHandler
 from .java_handler import JavaHandler
@@ -25,6 +26,7 @@ class LanguageHandlerFactory:
         str(SupportedLanguage.GO): GoHandler,
         str(SupportedLanguage.RUBY): RubyHandler,
         str(SupportedLanguage.R): RHandler,
+        str(SupportedLanguage.BASH): BashHandler,
     }
 
     @classmethod

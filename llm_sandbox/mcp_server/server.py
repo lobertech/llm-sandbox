@@ -65,7 +65,7 @@ def execute_code(
 
     Args:
         code: The code to execute
-        language: Programming language (python, javascript, java, cpp, go, r, ruby)
+        language: Programming language (python, javascript, java, cpp, go, r, ruby, bash)
         libraries: List of libraries/packages to install
         timeout: Execution timeout in seconds (default: 30)
 

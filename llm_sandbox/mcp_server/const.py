@@ -433,4 +433,59 @@ puts "Sum: #{sum}" """,
             },
         ],
     },
+    SupportedLanguage.BASH.value: {
+        "version": "5.1",
+        "package_manager": "N/A (library installation not supported)",
+        "preinstalled_libraries": [],
+        "use_cases": [
+            "Shell scripting",
+            "File and text processing",
+            "System administration tasks",
+            "Automation and glue scripts",
+        ],
+        "visualization_support": False,
+        "examples": [
+            {
+                "title": "Hello World",  # NOSONAR
+                "description": "Simple Bash hello world script",
+                "code": 'echo "Hello, World!"',
+            },
+            {
+                "title": "Variables and Loops",
+                "description": "Basic variable usage and for loop in Bash",
+                "code": """name="sandbox"
+for i in 1 2 3; do
+    echo "Run $i in $name"
+done
+""",
+            },
+            {
+                "title": "Text Processing Pipeline",
+                "description": "Count word frequencies using standard coreutils",
+                "code": """cat > fruits.txt << 'EOF'
+apple
+banana
+apple
+cherry
+EOF
+sort fruits.txt | uniq -c | sort -rn
+""",
+            },
+            {
+                "title": "Functions and Exit Codes",
+                "description": "Define a function and handle its return status",
+                "code": """check_file() {
+    if [ -f "$1" ]; then
+        echo "$1 exists"
+    else
+        echo "$1 not found"
+        return 1
+    fi
+}
+check_file /etc/os-release
+check_file /nonexistent || echo "check failed with status $?"
+""",
+            },
+        ],
+    },
 }

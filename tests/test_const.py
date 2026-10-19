@@ -108,11 +108,12 @@ class TestSupportedLanguage:
         assert SupportedLanguage.CPP == "cpp"
         assert SupportedLanguage.GO == "go"
         assert SupportedLanguage.RUBY == "ruby"
+        assert SupportedLanguage.BASH == "bash"
 
     def test_language_iteration(self) -> None:
         """Test iterating over languages."""
         languages = list(SupportedLanguage)
-        assert len(languages) == 7
+        assert len(languages) == 8
         assert SupportedLanguage.PYTHON in languages
         assert SupportedLanguage.JAVA in languages
         assert SupportedLanguage.JAVASCRIPT in languages
@@ -120,6 +121,7 @@ class TestSupportedLanguage:
         assert SupportedLanguage.GO in languages
         assert SupportedLanguage.RUBY in languages
         assert SupportedLanguage.R in languages
+        assert SupportedLanguage.BASH in languages
 
     def test_language_case_insensitive(self) -> None:
         """Test case-insensitive language lookup."""
@@ -129,6 +131,7 @@ class TestSupportedLanguage:
         assert SupportedLanguage("CPP") == SupportedLanguage.CPP
         assert SupportedLanguage("Go") == SupportedLanguage.GO
         assert SupportedLanguage("Ruby") == SupportedLanguage.RUBY
+        assert SupportedLanguage("Bash") == SupportedLanguage.BASH
 
 
 class TestDefaultImage:
